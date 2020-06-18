@@ -1,0 +1,16 @@
+Deploy code:
+gcloud beta functions deploy webhook --set-env-vars "TELEGRAM_TOKEN=934213771:AAFOqzjOFg8ovLkOPcGUFlioeO58N43i7NY" --runtime python37 --trigger-http --project=lazypod --timeout=300s
+
+
+Set webhook
+curl "https://api.telegram.org/bot934213771:AAFOqzjOFg8ovLkOPcGUFlioeO58N43i7NY/setWebhook?url=https://us-central1-lazypod.cloudfunctions.net/webhook&max_connections=1"
+
+
+
+View logs:
+gcloud functions logs read webhook --project=lazypod
+
+
+curl -u c8b13fb305cbd42cd2511:d1d237d88d0a20d8b9495 https://api.podbean.com/v1/oauth/token -X POST -d 'grant_type=client_credentials'
+
+curl -u c8b13fb305cbd42cd2511:d1d237d88d0a20d8b9495 https://postman-echo.com/post -X POST -d 'grant_type=client_credentials'
